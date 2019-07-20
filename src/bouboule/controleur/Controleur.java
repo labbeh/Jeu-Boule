@@ -1,4 +1,7 @@
 package bouboule.controleur;
+/**
+ * Controleur MVC
+ * */
 
 import java.util.Set;
 
@@ -32,7 +35,7 @@ public class Controleur {
 	
 	
 	public Controleur(Fenetre vue) {
-		plateau = new Plateau(1440, 900, true);
+		plateau = new Plateau(1024, 768, true);
 		this.vue = vue;
 		dir = 'h';
 		
@@ -68,7 +71,7 @@ public class Controleur {
 	
 	public Boule getGoal() {return plateau.getGoal();}
 	public Boule getJoueur() {return plateau.getJoueur();}
-	public synchronized Set<Ennemi> getEnnemis(){return plateau.getEnnemis();}
+	public Set<Ennemi> getEnnemis(){return plateau.getEnnemis();}
 	
 	public int largeur() {
 		return plateau.largeur;
@@ -91,7 +94,7 @@ public class Controleur {
 		/**
 		 * Temporisation pour l'accélération
 		 * */
-		private long tempo = 5;
+		private long tempo = 10;
 
 		@Override
 		public void run() {

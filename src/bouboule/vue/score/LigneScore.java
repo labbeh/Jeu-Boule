@@ -1,7 +1,10 @@
 package bouboule.vue.score;
 
 import java.awt.BorderLayout;
+import java.awt.GridBagConstraints;
+import java.awt.GridLayout;
 
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
@@ -21,7 +24,11 @@ public class LigneScore extends JPanel{
 	public LigneScore(int position, String nom, int nbPts) {
 		super();
 		
-		setLayout(new BorderLayout());
+		setLayout(/*new BorderLayout()*/ new GridLayout());
+		
+		add(new JLabel(position+"")/*, BorderLayout.WEST*/);
+		add(new JLabel(nom)/*, BorderLayout.CENTER*/);
+		add(new JLabel(nbPts+"")/*, BorderLayout.EAST*/);
 		
 	}
 
