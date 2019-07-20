@@ -24,6 +24,10 @@ public class Controleur {
 	 * */
 	private char dir;
 	
+	
+	/**
+	 * Instance d'une IA qui joue toute seule
+	 * */
 	private IA ia;
 	
 	
@@ -32,7 +36,7 @@ public class Controleur {
 		this.vue = vue;
 		dir = 'h';
 		
-		test();
+		//test();
 		
 		init();
 	}
@@ -145,7 +149,8 @@ public class Controleur {
 		 * */
 		private void finJeu() {
 			jeuEnCours = false;
-			ia.arret();
+			if(ia != null)
+				ia.arret();
 		}
 		
 	}
