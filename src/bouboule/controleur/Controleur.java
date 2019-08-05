@@ -44,7 +44,7 @@ public class Controleur {
 		this.vue = vue;
 		dir = 'h';
 		
-		//test();
+		test();
 		
 		init();
 	}
@@ -78,6 +78,11 @@ public class Controleur {
 	public Boule getJoueur() {return plateau.getJoueur();}
 	public Set<Ennemi> getEnnemis(){return plateau.getEnnemis();}
 	
+	
+	public char getDir() {
+		return dir;
+	}
+
 	public int largeur() {
 		return plateau.largeur;
 	}

@@ -48,8 +48,9 @@ public class IA implements Runnable{
 			double y = ctrl.getGoal().getY();
 			
 			if(x < boule.getX()) {
+				System.out.println("gauche");
 				ctrl.deplacer('g');
-				while(boule.getX() > x && enCours) {
+				while(boule.getX() > x && enCours && ctrl.getDir() == 'g') {
 					try 						   {Thread.sleep(20)   ;}
 					catch (InterruptedException e) {e.printStackTrace();}
 					
@@ -64,27 +65,32 @@ public class IA implements Runnable{
 				}
 			}
 			else if(x > boule.getX()) {
+				System.out.println("droite");
 				ctrl.deplacer('d');
-				while(boule.getX() < x && enCours) {
+				while(boule.getX() < x && enCours && ctrl.getDir() == 'd') {
 					try							   {Thread.sleep(20)   ;}
 					catch (InterruptedException e) {e.printStackTrace();}
 				}
 			}
 			
 			if(y < boule.getY()) {
+				System.out.println("haut");
 				ctrl.deplacer('h');
-				while(boule.getY() > y && enCours) {
+				while(boule.getY() > y && enCours && ctrl.getDir() == 'h') {
 					try 						   {Thread.sleep(20)   ;}
 					catch (InterruptedException e) {e.printStackTrace();}
 				}
 			}
 			else if(y > boule.getY()) {
+				System.out.println("bas");
 				ctrl.deplacer('b');
-				while(boule.getY() < y && enCours) {
+				while(boule.getY() < y && enCours && ctrl.getDir() == 'b') {
 					try 						   {Thread.sleep(20)   ;}
 					catch (InterruptedException e) {e.printStackTrace();}
 				}
 			}
+			/*try 						   {Thread.sleep(20)   ;}
+			catch (InterruptedException e) {e.printStackTrace();}*/
 
 		}
 		
@@ -95,18 +101,15 @@ public class IA implements Runnable{
 
 		public BouleEclaireur(Plateau plateau, double posX, double posY) {
 			super(plateau, posX, posY);
-			// TODO Auto-generated constructor stub
 		}
 
 		@Override
 		public String getType() {
-			// TODO Auto-generated method stub
-			return null;
+			return "eclaireur";
 		}
 
 		@Override
 		public Color getCoul() {
-			// TODO Auto-generated method stub
 			return null;
 		}
 		
