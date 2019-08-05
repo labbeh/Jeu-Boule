@@ -33,6 +33,11 @@ public class Controleur {
 	 * */
 	private IA ia;
 	
+	/**
+	 * Score de la partie en cours
+	 * */
+	private int score;
+	
 	
 	public Controleur(Fenetre vue) {
 		plateau = new Plateau(1024, 768, true);
@@ -79,6 +84,11 @@ public class Controleur {
 	
 	public int hauteur() {
 		return plateau.hauteur;
+	}
+	
+	private void incScore() {
+		score++;
+		vue.setScore(score);
 	}
 	
 	/**
@@ -130,6 +140,7 @@ public class Controleur {
 				plateau.nvEnnemi();
 				plateau.bougerGoal();
 				accelerer();
+				incScore();
 			}
 			
 			for(Ennemi e: plateau.getEnnemis())
@@ -137,6 +148,7 @@ public class Controleur {
 					finJeu();
 		}
 		
+
 		/**
 		 * Diminue la temporisation du thread qui déplace la boule joueur en permanence
 		 * afin d'accélérer sa vitesse de déplacement

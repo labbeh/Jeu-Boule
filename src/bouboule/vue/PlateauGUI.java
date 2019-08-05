@@ -1,5 +1,6 @@
 package bouboule.vue;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
@@ -38,6 +39,7 @@ public class PlateauGUI extends JPanel {
 		addKeyListener(new EcouteurClavier());
 		setFocusable(true);
 		setPreferredSize(new Dimension(ctrl.largeur() +ctrl.getJoueur().getDiametre(), ctrl.hauteur() +ctrl.getJoueur().getDiametre()));
+		setBackground(Color.BLACK);
 		
 		DIAMETRE = ctrl.getJoueur().getDiametre();
 	}

@@ -17,11 +17,29 @@ public class Jeu {
 	 * s'arrête
 	 * */
 	private boolean enCours;
+	
+	/**
+	 * Nombre de point dans la partie en cours
+	 * */
+	private int score;
 
 	public Jeu(Controleur ctrl) {
 		this.ctrl = ctrl;
 		
 		enCours = true;
+		score = 0;
+	}
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+	
+	public void incScore() {
+		score++;
 	}
 
 }
