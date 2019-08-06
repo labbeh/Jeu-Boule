@@ -40,7 +40,7 @@ public class Controleur {
 	
 	
 	public Controleur(Fenetre vue) {
-		plateau = new Plateau(1024, 768, true);
+		plateau = new Plateau(640, 480, true);
 		this.vue = vue;
 		dir = 'h';
 		

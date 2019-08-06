@@ -39,7 +39,7 @@ public class PlateauGUI extends JPanel {
 		addKeyListener(new EcouteurClavier());
 		setFocusable(true);
 		setPreferredSize(new Dimension(ctrl.largeur() +ctrl.getJoueur().getDiametre(), ctrl.hauteur() +ctrl.getJoueur().getDiametre()));
-		setBackground(Color.BLACK);
+		//setBackground(Color.BLACK);
 		
 		DIAMETRE = ctrl.getJoueur().getDiametre();
 	}

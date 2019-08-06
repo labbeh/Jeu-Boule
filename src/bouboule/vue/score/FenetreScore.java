@@ -1,8 +1,11 @@
 package bouboule.vue.score;
 
+import java.awt.BorderLayout;
 import java.awt.GridLayout;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class FenetreScore extends JFrame{
 
@@ -10,17 +13,26 @@ public class FenetreScore extends JFrame{
 		super();
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setLayout(new GridLayout(10, 1));
+		
+		JPanel zoneScores = new JPanel();
+		zoneScores.setLayout(new GridLayout(10, 1));
 		
 		for(int i=0; i<10; i++)
-			add(new LigneScore(1, "labbeh", 1000));
+			zoneScores.add(new LigneScore(1, "labbeh", 1000));
+		
+		JPanel zoneBoutons = new JPanel();
+		zoneBoutons.add(new JButton("Ok"));
+		zoneBoutons.add(new JButton("Nettoyer"));
+		
+		add(zoneScores, BorderLayout.CENTER);
+		add(zoneBoutons, BorderLayout.PAGE_END);
 		
 		pack();
-		setVisible(true);
+		//setVisible(true);
 	}
 	
 	public static void main(String[] args) {
-		new FenetreScore();
+		new FenetreScore().setVisible(true);
 	}
 
 }
