@@ -44,7 +44,7 @@ public class Controleur {
 		this.vue = vue;
 		dir = 'h';
 		
-		test();
+		//test();
 		
 		init();
 	}
