@@ -111,7 +111,7 @@ public class Controleur {
 		 * */
 		private long tempo = 10;
 
-		@Override
+		
 		public void run() {
 			while(jeuEnCours) {
 				try {

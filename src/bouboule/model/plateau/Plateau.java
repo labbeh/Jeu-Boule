@@ -54,7 +54,7 @@ public class Plateau {
 		this.torique = torique;
 		
 		joueur  = new BouleJoueur(this, largeur/2, hauteur/2); // à modifier
-		ennemis = new HashSet<>();
+		ennemis = new HashSet<Ennemi>();
 		goal 	= new Goal(this, positionAleatoire());
 	}
 	

@@ -13,14 +13,14 @@ import org.jdom2.input.SAXBuilder;
 import org.jdom2.output.XMLOutputter;
 
 /**
- * Cette classe gère la lecture et l'écriture d'un fichier de meilleurs scores
+ * Cette classe gï¿½re la lecture et l'ï¿½criture d'un fichier de meilleurs scores
  * @author labbeh
  * @version 2019-08-06
  * */
 
 public class FichierScore {
 	/**
-	 * chemin d'accès au fichier
+	 * chemin d'accï¿½s au fichier
 	 * */
 	private static final String XML_SCORE_FILENAME = "./datas/scores.xml";
 	
@@ -32,7 +32,7 @@ public class FichierScore {
 	private Map<String, Integer> scoresByNames;
 
 	public FichierScore() {
-		scoresByNames = new HashMap<>();
+		scoresByNames = new HashMap<String, Integer>();
 	}
 	
 	public void loadFile(){
@@ -76,7 +76,7 @@ public class FichierScore {
 		SAXBuilder builder = new SAXBuilder();
 		XMLOutputter out = new XMLOutputter();
 		
-		// vérification du score
+		// vï¿½rification du score
 		Collection<Integer> values = scoresByNames.values();
 
 		try{

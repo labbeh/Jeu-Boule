@@ -72,12 +72,10 @@ public class PlateauGUI extends JPanel {
 	 * */
 	private class EcouteurClavier implements KeyListener{
 
-		@Override
 		public void keyTyped(KeyEvent evt) {
 			
 		}
 
-		@Override
 		public void keyPressed(KeyEvent evt) {
 			if 	   (evt.getKeyCode() == KeyEvent.VK_UP	 ) ctrl.deplacer('h');
 			else if(evt.getKeyCode() == KeyEvent.VK_DOWN ) ctrl.deplacer('b');
@@ -85,7 +83,6 @@ public class PlateauGUI extends JPanel {
 			else if(evt.getKeyCode() == KeyEvent.VK_RIGHT) ctrl.deplacer('d');
 		}
 
-		@Override
 		public void keyReleased(KeyEvent evt) {
 			
 		}

@@ -35,7 +35,7 @@ public class IA implements Runnable{
 		enCours = false;
 	}
 	
-	@Override
+	
 	public void run() {
 		try {
 			Thread.sleep(800);
