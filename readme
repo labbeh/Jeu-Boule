@@ -1,1 +1,6 @@
-Fichier à compléter
+Petit jeu en java
+
+Une boule se déplace en continu sur l'écran, attrapez un maximum de boules vertes et la partie s'arrête lorsque vous touchez une boule rouge.
+Attention, la vitesse augmente à chaque boule verte que vous attrapez!
+
+Un système d'enregistrement des meilleurs scores est en cours d'enregistrement et une IA très basique peut jouer au jeu toute seule.
